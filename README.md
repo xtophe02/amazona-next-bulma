@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Amazona Ecommerce
 
-## Getting Started
+short description what the APP does:
 
-First, run the development server:
+**Authentication**
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- register
+- login/logout
+  only logged in you can add buy products
+- if you are admin you have access to a dashboard where you can:
+  you can add/edit/delete products/users, view orders ,ship merchandise
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**ADD/EDIT/DELETE Products**
+only an admin user can CRUD products/users
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+**Raiting**
+you can leave a raiting and comment to a product
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**Cart**
+you can add products to the cart and then order with paypal
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Orders**
+you can views the history of your orders
 
-## Learn More
+**pagination**
+used mongo pagination to load the products
 
-To learn more about Next.js, take a look at the following resources:
+**filters**
+used mongoose to filter by name/category
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**index/product page**
+the index page and the product page are static meaning that they will load fast, and be rebuild in 10 sec if the data changed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**api**
+only admin can see the dashboard, if not it will be redirected
 
-## Deploy on Vercel
+**cookies**
+to save state so when you refresh you won't lose the state
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**notifications**
+build notifications with context
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**packages used**
+
+- paypal
+  for payments
+- bulma
+  css framework
+- chart.js
+  graphics for sales
+- cloudinary
+  upload pictures products
+- js-cookie
+  to save state on cookies
+- mongoose
+  save data
+- nextjs
+  react framework
+- next-connect
+  to work with nextjs api
+- nprogress
+  when SSR (server side render) we have a loading status
+- react-hook-form
+  easy way to have forms
+- react-stars
+  to have raitings
