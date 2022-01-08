@@ -14,6 +14,17 @@ export const getAllProducts = async () => {
     return [];
   }
 };
+export const getAllAllProducts = async () => {
+  try {
+    await dbConnect();
+
+    const products = await Product.find({});
+    return JSON.stringify(products);
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};
 export const getAllUsers = async () => {
   try {
     await dbConnect();

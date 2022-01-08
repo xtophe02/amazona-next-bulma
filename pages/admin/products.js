@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Layout from '../../components/Layout';
-import { getAllProducts } from '../../utils/fetchData';
+import { getAllAllProducts } from '../../utils/fetchData';
 export default function ProductsAdminPage({ products, user }) {
   const [state, setState] = useState(products);
   const router = useRouter();
@@ -94,7 +94,7 @@ export async function getServerSideProps(context) {
     };
   }
   try {
-    const { products } = await getAllProducts();
+    const products = await getAllAllProducts();
 
     return {
       props: {

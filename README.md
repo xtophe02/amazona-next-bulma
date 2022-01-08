@@ -13,7 +13,7 @@ short description what the APP does:
 **ADD/EDIT/DELETE Products**
 only an admin user can CRUD products/users
 
-**Raiting**
+**Rating**
 you can leave a raiting and comment to a product
 
 **Cart**
